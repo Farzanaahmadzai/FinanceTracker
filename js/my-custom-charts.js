@@ -80,3 +80,58 @@ title: {
 }
 }
 });
+
+const incomeXValues = ["salary", "business", "shope",];
+const incomeYValues = [6000, 4800, 5500,];
+const incomeBgColors = [
+      
+      "#004445",
+      "#6FB98F",
+      "#5C821A",
+      
+];
+
+new Chart("incomeChart", {
+type: "doughnut",
+data: {
+labels: incomeXValues,
+datasets: [{
+  backgroundColor: incomeBgColors,
+  data: incomeYValues
+}]
+},
+options: {
+title: {
+  display: true,
+  text: "income tracker chart"
+}
+}
+});
+
+
+const expenseXValues = ["food", "home", "rent",];
+const expenseYValues = [6000, 4800, 5500,];
+const expenseBgColors = [
+      
+      "#004445",
+      "#6FB98F",
+      "#5C821A",
+      
+];
+
+new Chart("expenseChart", {
+type: "doughnut",
+data: {
+labels: expenseXValues,
+datasets: [{
+  backgroundColor: expenseBgColors,
+  data: expenseYValues
+}]
+},
+options: {
+title: {
+  display: true,
+  text: "expense tracker chart"
+}
+}
+});
